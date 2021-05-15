@@ -105,17 +105,19 @@
 
         return app;
       };
-      const domRoot = document.getElementById('root');
-      //add to root
-      domRoot.append(
-        App({
-          state,
-        })
-      );
+      //   const domRoot =
+      //   //add to root
+      //   domRoot.append(
+      //     App({
+      //       state,
+      //     })
+      //   );
 
       function render(newDom, realDomRoot) {
         realDomRoot.append(newDom);
       }
+
+      render(App({ state }), document.getElementById('root'));
     </script>
   </body>
 </html>
